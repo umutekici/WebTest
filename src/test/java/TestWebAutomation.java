@@ -67,7 +67,7 @@ public class TestWebAutomation {
         searchProduct.ChooseRandomProduct();
         Thread.sleep(2000);
 
-        //rices comparison operations
+        //prices comparison operations
         String productPagePrice = driver.findElement(By.cssSelector("div.newPrice")).getText();
         Thread.sleep(2000);
         driver.findElement(By.cssSelector("a.btn.btnGrey.btnAddBasket")).click();
@@ -75,7 +75,7 @@ public class TestWebAutomation {
         driver.findElement(By.cssSelector("a.myBasket")).click();
         String basketPrice = driver.findElement(By.cssSelector("div.priceArea")).getText() + "\n" + "KDV\n" + "DAHİL";
         Assert.assertEquals(productPagePrice, basketPrice);
-        System.out.println("Two Princes Equal passed");
+        System.out.println("Two Prices Equal passed");
         Thread.sleep(2000);
 
         //number increase operations
